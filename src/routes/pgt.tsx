@@ -3,7 +3,7 @@ import { useSeo } from '../lib/seo'
 import { faqPageJsonLd } from '../lib/structuredData'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/Accordion'
 import { useMemo, useState } from 'react'
-import GeneticTesting from '../assets/genetic_testing.jpg'
+import GeneticTesting from '../assets/genetic_testing.webp'
 import { ArrowRight, CheckCircle2, Dna, Info } from 'lucide-react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/Tabs'
 

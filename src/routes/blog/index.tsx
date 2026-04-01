@@ -4,11 +4,14 @@ import { useQuery } from '@tanstack/react-query'
 import { api } from '../../api/client'
 import { useSeo } from '../../lib/seo'
 import { ArrowRight, BookOpen, CalendarHeart, Clock3, HeartPulse, Phone, Sparkles } from 'lucide-react'
-import Review from '../../assets/review.jpg'
-import FollowUp from '../../assets/follow_up.jpg'
-import Fertility from '../../assets/fertility.jpg'
+import Review from '../../assets/review.webp'
+import FollowUp from '../../assets/follow_up.webp'
+import Fertility from '../../assets/fertility.webp'
 import { FaqSection } from '../../components/sections/FaqSection'
-import BlogHero from '../../assets/blog_1.jpeg'
+import BlogHero from '../../assets/blog_1.webp'
+import BlogHero640 from '../../assets/blog_1-640.webp'
+import BlogHero1024 from '../../assets/blog_1-1024.webp'
+import BlogHero1440 from '../../assets/blog_1-1440.webp'
 
 const categories = ['Success Stories', 'Science', 'Wellness', 'Financing'] as const
 
@@ -55,7 +58,7 @@ function BlogIndexPage() {
   ] as const
 
   useSeo({
-    title: 'IVF Blog | M&C Fertility Center',
+    title: 'IVF Blog | M&C Fertility Centre',
     description: 'Educational IVF blog in Nigeria. Science, wellness, financing, and success story guidance with clear next steps.',
   })
 
@@ -78,7 +81,13 @@ function BlogIndexPage() {
   return (
     <div className="space-y-10">
       <section className="relative isolate overflow-hidden rounded-[36px] border border-border/70 shadow-sm">
-        <img src={BlogHero} alt="IVF blog education and fertility wellbeing resources" className="absolute inset-0 -z-30 h-full w-full object-cover" />
+        <img
+          src={BlogHero}
+          srcSet={`${BlogHero640} 640w, ${BlogHero1024} 1024w, ${BlogHero1440} 1440w`}
+          sizes="100vw"
+          alt="IVF blog education and fertility wellbeing resources"
+          className="absolute inset-0 -z-30 h-full w-full object-cover"
+        />
         <div className="absolute inset-0 -z-20 bg-[linear-gradient(110deg,rgba(7,22,50,0.86)_8%,rgba(14,35,82,0.62)_45%,rgba(2,132,199,0.34)_74%,rgba(236,72,153,0.28)_100%)]" />
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(760px_300px_at_12%_14%,rgba(56,189,248,0.28),transparent_60%),radial-gradient(600px_260px_at_88%_18%,rgba(244,114,182,0.22),transparent_64%),radial-gradient(760px_320px_at_50%_100%,rgba(16,185,129,0.16),transparent_68%)]" />
 

@@ -8,14 +8,17 @@ import { useSeo } from '../lib/seo'
 import type { BloodType, DonorProfile, EyeColor } from '../lib/data/donors'
 import { faqPageJsonLd } from '../lib/structuredData'
 import { FaqSection } from '../components/sections/FaqSection'
-import Donor from '../assets/donor.jpg'
-import Donor2 from '../assets/donor_2.jpg'
-import DonorProgram from '../assets/donor_program.jpg'
-import Review from '../assets/review.jpg'
-import Happy from '../assets/happy.jpg'
-import Protocols from '../assets/protocols.jpg'
-import Fertility from '../assets/fertility.jpg'
-import Donor5 from '../assets/donor5.jpg'
+import Donor from '../assets/donor.webp'
+import Donor640 from '../assets/donor-640.webp'
+import Donor1024 from '../assets/donor-1024.webp'
+import Donor1440 from '../assets/donor-1440.webp'
+import Donor2 from '../assets/donor_2.webp'
+import DonorProgram from '../assets/donor_program.webp'
+import Review from '../assets/review.webp'
+import Happy from '../assets/happy.webp'
+import Protocols from '../assets/protocols.webp'
+import Fertility from '../assets/fertility.webp'
+import Donor5 from '../assets/donor5.webp'
 
 export const Route = createFileRoute('/donor')({
   component: DonorPage,
@@ -101,7 +104,13 @@ export function DonorPage() {
   return (
     <div className="space-y-10">
       <section className="relative isolate overflow-hidden rounded-[36px] border border-border/70 shadow-sm">
-        <img src={Donor} alt="Donor treatment and recipient support" className="absolute inset-0 -z-30 h-full w-full object-cover" />
+        <img
+          src={Donor}
+          srcSet={`${Donor640} 640w, ${Donor1024} 1024w, ${Donor1440} 1440w`}
+          sizes="100vw"
+          alt="Donor treatment and recipient support"
+          className="absolute inset-0 -z-30 h-full w-full object-cover"
+        />
         <div className="absolute inset-0 -z-20 bg-[linear-gradient(110deg,rgba(9,24,52,0.82)_10%,rgba(12,26,58,0.58)_42%,rgba(59,130,246,0.30)_72%,rgba(236,72,153,0.30)_100%)]" />
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(760px_300px_at_14%_14%,rgba(14,165,233,0.26),transparent_60%),radial-gradient(640px_280px_at_86%_18%,rgba(244,114,182,0.22),transparent_62%),radial-gradient(620px_260px_at_50%_100%,rgba(52,211,153,0.18),transparent_66%)]" />
 

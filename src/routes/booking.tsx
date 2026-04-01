@@ -5,8 +5,11 @@ import { api } from '../api/client'
 import { useSeo } from '../lib/seo'
 import { motion } from 'framer-motion'
 import { ArrowRight, CalendarHeart, CheckCircle2, ChevronLeft, ChevronRight, Clock3, Sparkles } from 'lucide-react'
-import BookingHero from '../assets/booking_hero_1.jpeg'
-import Booking2 from '../assets/booking_4.jpeg'
+import BookingHero from '../assets/booking_hero_1.webp'
+import BookingHero640 from '../assets/booking_hero_1-640.webp'
+import BookingHero1024 from '../assets/booking_hero_1-1024.webp'
+import BookingHero1440 from '../assets/booking_hero_1-1440.webp'
+import Booking2 from '../assets/booking_4.webp'
 
 type BookingServiceId =
   | 'new-patient'
@@ -276,7 +279,13 @@ function BookingPage() {
   return (
     <div className="space-y-10">
       <section className="relative isolate overflow-hidden rounded-[36px] border border-border/70 shadow-sm">
-        <img src={BookingHero} alt="Book a fertility consultation at M&C Fertility Centre" className="absolute inset-0 -z-30 h-full w-full object-cover" />
+        <img
+          src={BookingHero}
+          srcSet={`${BookingHero640} 640w, ${BookingHero1024} 1024w, ${BookingHero1440} 1440w`}
+          sizes="100vw"
+          alt="Book a fertility consultation at M&C Fertility Centre"
+          className="absolute inset-0 -z-30 h-full w-full object-cover"
+        />
         <div className="absolute inset-0 -z-20 bg-[linear-gradient(110deg,rgba(7,22,50,0.86)_8%,rgba(14,35,82,0.62)_45%,rgba(2,132,199,0.34)_74%,rgba(236,72,153,0.28)_100%)]" />
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(760px_300px_at_12%_14%,rgba(56,189,248,0.28),transparent_60%),radial-gradient(600px_260px_at_88%_18%,rgba(244,114,182,0.22),transparent_64%),radial-gradient(760px_320px_at_50%_100%,rgba(16,185,129,0.16),transparent_68%)]" />
 

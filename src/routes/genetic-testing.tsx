@@ -5,11 +5,14 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/Tabs'
 import { FaqSection } from '../components/sections/FaqSection'
 import { useSeo } from '../lib/seo'
 import { faqPageJsonLd } from '../lib/structuredData'
-import Review from '../assets/review.jpg'
-import IVFInfo from '../assets/ivf_info.jpeg'
-import GeneticTestingHero from '../assets/genetic_testing_hero.jpeg'
-import DNA3 from '../assets/dna_3.jpeg'
-import DNA1 from '../assets/dna_1.jpeg'
+import Review from '../assets/review.webp'
+import IVFInfo from '../assets/ivf_info.webp'
+import GeneticTestingHero from '../assets/genetic_testing_hero.webp'
+import GeneticTestingHero640 from '../assets/genetic_testing_hero-640.webp'
+import GeneticTestingHero1024 from '../assets/genetic_testing_hero-1024.webp'
+import GeneticTestingHero1440 from '../assets/genetic_testing_hero-1440.webp'
+import DNA3 from '../assets/dna_3.webp'
+import DNA1 from '../assets/dna_1.webp'
 
 export const Route = createFileRoute('/genetic-testing')({
   component: GeneticTestingPage,
@@ -88,7 +91,13 @@ function GeneticTestingPage() {
   return (
     <div className="space-y-10">
       <section className="relative isolate overflow-hidden rounded-[36px] border border-border/70 shadow-sm">
-        <img src={GeneticTestingHero} alt="Genetic testing and IVF laboratory support" className="absolute inset-0 -z-30 h-full w-full object-cover" />
+        <img
+          src={GeneticTestingHero}
+          srcSet={`${GeneticTestingHero640} 640w, ${GeneticTestingHero1024} 1024w, ${GeneticTestingHero1440} 1440w`}
+          sizes="100vw"
+          alt="Genetic testing and IVF laboratory support"
+          className="absolute inset-0 -z-30 h-full w-full object-cover"
+        />
         <div className="absolute inset-0 -z-20 bg-[linear-gradient(110deg,rgba(9,24,52,0.82)_10%,rgba(12,26,58,0.58)_42%,rgba(59,130,246,0.30)_72%,rgba(236,72,153,0.32)_100%)]" />
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(760px_300px_at_14%_14%,rgba(14,165,233,0.26),transparent_60%),radial-gradient(640px_280px_at_86%_18%,rgba(244,114,182,0.22),transparent_62%),radial-gradient(620px_260px_at_50%_100%,rgba(52,211,153,0.18),transparent_66%)]" />
 

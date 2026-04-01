@@ -2,7 +2,7 @@ import { createFileRoute, Link } from '@tanstack/react-router'
 import { useSeo } from '../lib/seo'
 import { faqPageJsonLd } from '../lib/structuredData'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/Accordion'
-import Advanced from '../assets/advanced.jpg'
+import Advanced from '../assets/advanced.webp'
 import { ArrowRight, CheckCircle2, Dna, Info } from 'lucide-react'
 import { useMemo } from 'react'
 

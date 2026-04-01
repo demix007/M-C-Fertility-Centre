@@ -4,12 +4,15 @@ import { useSeo } from '../lib/seo'
 import { useMemo, useState } from 'react'
 import { ArrowRight, CalendarHeart, CheckCircle2, Phone, ShieldCheck, Sparkles } from 'lucide-react'
 import { FaqSection } from '../components/sections/FaqSection'
-import Review from '../assets/review.jpg'
-import PricingHero from '../assets/pricing_hero.jpeg'
-import Pricing2 from '../assets/pricing_2.jpeg'
-import Pricing4 from '../assets/pricing_4.jpeg'
-import Pricing5 from '../assets/pricing_5.jpeg'
-import pricing3 from '../assets/pricing_3.jpeg'
+import Review from '../assets/review.webp'
+import PricingHero from '../assets/pricing_hero.webp'
+import PricingHero640 from '../assets/pricing_hero-640.webp'
+import PricingHero1024 from '../assets/pricing_hero-1024.webp'
+import PricingHero1440 from '../assets/pricing_hero-1440.webp'
+import Pricing2 from '../assets/pricing_2.webp'
+import Pricing4 from '../assets/pricing_4.webp'
+import Pricing5 from '../assets/pricing_5.webp'
+import pricing3 from '../assets/pricing_3.webp'
 
 export const Route = createFileRoute('/prices')({
   component: PricesPage,
@@ -55,7 +58,13 @@ function PricesPage() {
   return (
     <div className="space-y-10">
       <section className="relative isolate overflow-hidden rounded-[36px] border border-border/70 shadow-sm">
-        <img src={PricingHero} alt="Fertility treatment pricing and planning consultation" className="absolute inset-0 -z-30 h-full w-full object-cover" />
+        <img
+          src={PricingHero}
+          srcSet={`${PricingHero640} 640w, ${PricingHero1024} 1024w, ${PricingHero1440} 1440w`}
+          sizes="100vw"
+          alt="Fertility treatment pricing and planning consultation"
+          className="absolute inset-0 -z-30 h-full w-full object-cover"
+        />
         <div className="absolute inset-0 -z-20 bg-[linear-gradient(110deg,rgba(9,24,52,0.82)_10%,rgba(12,26,58,0.58)_42%,rgba(59,130,246,0.32)_72%,rgba(236,72,153,0.30)_100%)]" />
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(760px_300px_at_14%_14%,rgba(14,165,233,0.26),transparent_60%),radial-gradient(640px_280px_at_86%_18%,rgba(244,114,182,0.22),transparent_62%),radial-gradient(620px_260px_at_50%_100%,rgba(52,211,153,0.18),transparent_66%)]" />
 

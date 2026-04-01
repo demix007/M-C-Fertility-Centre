@@ -4,7 +4,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '..
 import { useMemo } from 'react'
 import { useSeo } from '../lib/seo'
 import { faqPageJsonLd } from '../lib/structuredData'
-import FollowUp from '../assets/follow_up.jpg'
+import FollowUp from '../assets/follow_up.webp'
 
 export const Route = createFileRoute('/frozen-embryo-transfer')({
   component: FrozenEmbryoTransferPage,

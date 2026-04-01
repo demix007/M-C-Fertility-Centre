@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle2, ShieldCheck, Stethoscope, TestTube2 } from 'l
 import { useMemo } from 'react'
 import { useSeo } from '../lib/seo'
 import { faqPageJsonLd } from '../lib/structuredData'
-import PetriDish from '../assets/petri_dish.jpg'
+import PetriDish from '../assets/petri_dish.webp'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/Accordion'
 
 export const Route = createFileRoute('/icsi')({

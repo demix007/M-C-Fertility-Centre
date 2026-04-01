@@ -2,7 +2,7 @@ import { createFileRoute, Link } from '@tanstack/react-router'
 import { useMemo } from 'react'
 import { useSeo } from '../lib/seo'
 import { faqPageJsonLd } from '../lib/structuredData'
-import EggFreezing from '../assets/egg_freezing.jpg'
+import EggFreezing from '../assets/egg_freezing.webp'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/Accordion'
 import { ArrowRight, CheckCircle2, HeartHandshake, ShieldCheck } from 'lucide-react'
 

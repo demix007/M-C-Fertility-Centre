@@ -11,12 +11,15 @@ import {
   Stethoscope,
   Users,
 } from 'lucide-react'
-import Fertility from '../assets/fertility.jpg'
-import FollowUp from '../assets/follow_up.jpg'
-import Review from '../assets/review.jpg'
+import Fertility from '../assets/fertility.webp'
+import FollowUp from '../assets/follow_up.webp'
+import Review from '../assets/review.webp'
 import { FaqSection } from '../components/sections/FaqSection'
-import AboutHero from '../assets/about_1.jpeg'
-import About2 from '../assets/about_3.jpeg'
+import AboutHero from '../assets/about_1.webp'
+import AboutHero640 from '../assets/about_1-640.webp'
+import AboutHero1024 from '../assets/about_1-1024.webp'
+import AboutHero1440 from '../assets/about_1-1440.webp'
+import About2 from '../assets/about_3.webp'
 
 export const Route = createFileRoute('/about')({
   component: AboutPage,
@@ -80,7 +83,13 @@ function AboutPage() {
   return (
     <div className="space-y-10">
       <section className="relative isolate overflow-hidden rounded-[36px] border border-border/70 shadow-sm">
-        <img src={AboutHero} alt="Fertility specialists supporting patients at M&C Fertility Centre" className="absolute inset-0 -z-30 h-full w-full object-cover" />
+        <img
+          src={AboutHero}
+          srcSet={`${AboutHero640} 640w, ${AboutHero1024} 1024w, ${AboutHero1440} 1440w`}
+          sizes="100vw"
+          alt="Fertility specialists supporting patients at M&C Fertility Centre"
+          className="absolute inset-0 -z-30 h-full w-full object-cover"
+        />
         <div className="absolute inset-0 -z-20 bg-[linear-gradient(110deg,rgba(6,20,48,0.86)_8%,rgba(14,35,82,0.62)_45%,rgba(14,165,233,0.30)_74%,rgba(236,72,153,0.28)_100%)]" />
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(760px_320px_at_14%_14%,rgba(56,189,248,0.26),transparent_60%),radial-gradient(620px_260px_at_86%_18%,rgba(244,114,182,0.22),transparent_64%),radial-gradient(760px_320px_at_50%_100%,rgba(16,185,129,0.14),transparent_66%)]" />
 

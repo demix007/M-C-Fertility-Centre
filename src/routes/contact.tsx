@@ -6,11 +6,14 @@ import { useState } from 'react'
 import { clinicInfo } from '../lib/clinicInfo'
 import { localBusinessJsonLd, medicalOrganizationJsonLd } from '../lib/structuredData'
 import { ArrowRight, CalendarHeart, CheckCircle2, Clock3, Mail, MapPin, Phone, Sparkles, Users } from 'lucide-react'
-import Review from '../assets/review.jpg'
+import Review from '../assets/review.webp'
 import { FaqSection } from '../components/sections/FaqSection'
-import ContactHero from '../assets/contact_4.jpeg'
-import Contact2 from '../assets/contact_us_2.jpeg'
-import Contact3 from '../assets/contact_us_3.jpeg'
+import ContactHero from '../assets/contact_4.webp'
+import ContactHero640 from '../assets/contact_4-640.webp'
+import ContactHero1024 from '../assets/contact_4-1024.webp'
+import ContactHero1440 from '../assets/contact_4-1440.webp'
+import Contact2 from '../assets/contact_us_2.webp'
+import Contact3 from '../assets/contact_us_3.webp'
 
 export const Route = createFileRoute('/contact')({
   component: ContactPage,
@@ -87,7 +90,13 @@ export default function ContactPage() {
   return (
     <div className="space-y-10">
       <section className="relative isolate overflow-hidden rounded-[36px] border border-border/70 shadow-sm">
-        <img src={ContactHero} alt="Contact M&C Fertility Centre for consultation and support" className="absolute inset-0 -z-30 h-full w-full object-cover" />
+        <img
+          src={ContactHero}
+          srcSet={`${ContactHero640} 640w, ${ContactHero1024} 1024w, ${ContactHero1440} 1440w`}
+          sizes="100vw"
+          alt="Contact M&C Fertility Centre for consultation and support"
+          className="absolute inset-0 -z-30 h-full w-full object-cover"
+        />
         <div className="absolute inset-0 -z-20 bg-[linear-gradient(110deg,rgba(7,22,50,0.86)_8%,rgba(14,35,82,0.62)_45%,rgba(2,132,199,0.34)_74%,rgba(236,72,153,0.28)_100%)]" />
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(760px_300px_at_12%_14%,rgba(56,189,248,0.28),transparent_60%),radial-gradient(600px_260px_at_88%_18%,rgba(244,114,182,0.22),transparent_64%),radial-gradient(760px_320px_at_50%_100%,rgba(16,185,129,0.16),transparent_68%)]" />
 

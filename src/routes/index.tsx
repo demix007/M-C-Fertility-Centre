@@ -1,12 +1,15 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { motion, useReducedMotion } from 'framer-motion'
 import { useEffect, useMemo, useRef, useState } from 'react'
-import heroImg from '../assets/hero.jpg'
-import ultraSoundImg from '../assets/love_pregnancy.jpg'
-import TommyScan from '../assets/tommy_scan.jpg'
-import HealthyBaby from '../assets/healthy_baby.jpg'
-import HealthyMother from '../assets/healthy_mother.jpg'
-import PersonalisedTreatment from '../assets/personalised_treatment.jpg'
+import heroImg from '../assets/hero.webp'
+import heroImg640 from '../assets/hero-640.webp'
+import heroImg1024 from '../assets/hero-1024.webp'
+import heroImg1440 from '../assets/hero-1440.webp'
+import ultraSoundImg from '../assets/love_pregnancy.webp'
+import TommyScan from '../assets/tommy_scan.webp'
+import HealthyBaby from '../assets/healthy_baby.webp'
+import HealthyMother from '../assets/healthy_mother.webp'
+import PersonalisedTreatment from '../assets/personalised_treatment.webp'
 import {
   ArrowRight,
   BookOpenIcon,
@@ -326,6 +329,8 @@ function RouteComponent() {
             <div className="relative h-full overflow-hidden rounded-[28px] bg-background/30 shadow-sm">
               <motion.img
                 src={heroImg}
+                srcSet={`${heroImg640} 640w, ${heroImg1024} 1024w, ${heroImg1440} 1440w`}
+                sizes="(min-width: 1024px) 50vw, 100vw"
                 alt="Illustration of patient care and guidance"
                 className="h-full w-full object-cover"
                 initial={false}

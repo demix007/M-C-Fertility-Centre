@@ -5,11 +5,14 @@ import { useGuideGateStore } from '../../state/guideGateStore'
 import { GuideGateModal } from '../../components/guides/GuideGateModal'
 import { ArrowRight, BookOpen, CalendarHeart, CheckCircle2, CircleHelp, PlayCircle, Phone, Sparkles } from 'lucide-react'
 import { FaqSection } from '../../components/sections/FaqSection'
-import FollowUp from '../../assets/follow_up.jpg'
-import Review from '../../assets/review.jpg'
-import Guide4 from '../../assets/guide_4.jpeg'
-import Guide from '../../assets/guide.jpeg'
-import Guide1 from '../../assets/guide_1.jpeg'
+import FollowUp from '../../assets/follow_up.webp'
+import Review from '../../assets/review.webp'
+import Guide4 from '../../assets/guide_4.webp'
+import Guide4640 from '../../assets/guide_4-640.webp'
+import Guide41024 from '../../assets/guide_4-1024.webp'
+import Guide41440 from '../../assets/guide_4-1440.webp'
+import Guide from '../../assets/guide.webp'
+import Guide1 from '../../assets/guide_1.webp'
 
 export const Route = createFileRoute('/guides/')({
   component: GuidesPage,
@@ -99,7 +102,13 @@ function GuidesPage() {
   return (
     <div className="space-y-10">
       <section className="relative isolate overflow-hidden rounded-[36px] border border-border/70 shadow-sm">
-        <img src={Guide4} alt="Fertility education resources and IVF guide support" className="absolute inset-0 -z-30 h-full w-full object-cover" />
+        <img
+          src={Guide4}
+          srcSet={`${Guide4640} 640w, ${Guide41024} 1024w, ${Guide41440} 1440w`}
+          sizes="100vw"
+          alt="Fertility education resources and IVF guide support"
+          className="absolute inset-0 -z-30 h-full w-full object-cover"
+        />
         <div className="absolute inset-0 -z-20 bg-[linear-gradient(110deg,rgba(6,20,48,0.86)_8%,rgba(14,35,82,0.62)_45%,rgba(8,145,178,0.30)_74%,rgba(236,72,153,0.28)_100%)]" />
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(700px_300px_at_12%_18%,rgba(56,189,248,0.28),transparent_60%),radial-gradient(620px_280px_at_88%_18%,rgba(244,114,182,0.2),transparent_64%),radial-gradient(760px_320px_at_50%_100%,rgba(16,185,129,0.14),transparent_66%)]" />
 

@@ -4,8 +4,8 @@ import { useSeo } from '../lib/seo'
 import { faqPageJsonLd } from '../lib/structuredData'
 import { ArrowRight, CheckCircle2, Microscope, Sparkles } from 'lucide-react'
 import { useMemo } from 'react'
-import Protocols from '../assets/protocols.jpg'
-import Happy from '../assets/happy.jpg'
+import Protocols from '../assets/protocols.webp'
+import Happy from '../assets/happy.webp'
 
 export const Route = createFileRoute('/blastocyst-grading')({
   component: BlastocystGradingPage,

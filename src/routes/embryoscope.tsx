@@ -2,7 +2,7 @@ import { createFileRoute, Link } from '@tanstack/react-router'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/Accordion'
 import { useSeo } from '../lib/seo'
 import { faqPageJsonLd } from '../lib/structuredData'
-import Review from '../assets/review.jpg'
+import Review from '../assets/review.webp'
 import { ArrowRight, CheckCircle2, Eye, ShieldCheck } from 'lucide-react'
 import { useMemo } from 'react'
 

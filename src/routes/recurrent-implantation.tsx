@@ -4,7 +4,7 @@ import { useSeo } from '../lib/seo'
 import { faqPageJsonLd } from '../lib/structuredData'
 import { ArrowRight, CheckCircle2, HeartPulse, ShieldCheck } from 'lucide-react'
 import { useMemo } from 'react'
-import Happy from '../assets/happy.jpg'
+import Happy from '../assets/happy.webp'
 
 export const Route = createFileRoute('/recurrent-implantation')({
   component: RecurrentImplantationPage,
