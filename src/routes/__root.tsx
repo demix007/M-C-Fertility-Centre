@@ -9,29 +9,7 @@ import {
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
 import { SiteHeader } from '../components/layout/SiteHeader'
 import { SiteFooter } from '../components/layout/SiteFooter'
-import { useThemeStore } from '../state/themeStore'
-import { applyThemeToDocument } from '../lib/theme'
 import { startMocking } from '../mocks/startMocking'
-
-function ThemeInitializer() {
-  const mode = useThemeStore((s) => s.mode)
-  const setMode = useThemeStore((s) => s.setMode)
-
-  useEffect(() => {
-    // Persisted theme preference (PRD: native light/dark with system detection).
-    const saved = localStorage.getItem('mc_theme_mode')
-    if (saved === 'light' || saved === 'dark' || saved === 'system') {
-      setMode(saved)
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
-
-  useEffect(() => {
-    applyThemeToDocument(mode)
-  }, [mode])
-
-  return null
-}
 
 export const Route = createRootRoute({
   component: RootLayout,
@@ -49,7 +27,6 @@ function RootLayout() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <ThemeInitializer />
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-background focus:px-3 focus:py-2 focus:text-foreground"

@@ -1,7 +1,6 @@
 import { Link } from '@tanstack/react-router'
 import { useState } from 'react'
 import { CircleDollarSign, FlaskConical, HeartHandshake, Info, Egg, Dna, BookOpen, Newspaper, Phone, Stethoscope, Menu, X } from 'lucide-react'
-// import { ThemeToggle } from '../ThemeToggle'
 
 const nav = [
   { to: '/services', label: 'Treatments', icon: Stethoscope },
@@ -32,7 +31,7 @@ export function SiteHeader() {
             <div className="h-10 w-10 rounded-2xl bg-gradient-to-br from-primary to-accent shadow-md ring-1 ring-border/50" />
             <div className="leading-tight">
               <div className="text-sm font-extrabold tracking-tight text-foreground md:text-base">
-                M&C Fertility Center
+                M&C Fertility Centre
               </div>
               <div className="hidden text-xs text-muted-foreground md:block md:text-sm">Ultra-modern IVF care in Nigeria</div>
             </div>
@@ -65,7 +64,6 @@ export function SiteHeader() {
           >
             Book Consultation
           </Link>
-          {/* <ThemeToggle /> */}
         </div>
 
         <div className="flex items-center gap-2 xl:hidden">
