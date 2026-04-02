@@ -6,7 +6,6 @@ import { useState } from 'react'
 import { clinicInfo } from '../lib/clinicInfo'
 import { localBusinessJsonLd, medicalOrganizationJsonLd } from '../lib/structuredData'
 import { ArrowRight, CalendarHeart, CheckCircle2, Clock3, Mail, MapPin, Phone, Sparkles, Users } from 'lucide-react'
-import Review from '../assets/review.webp'
 import { FaqSection } from '../components/sections/FaqSection'
 import ContactHero from '../assets/contact_4.webp'
 import ContactHero640 from '../assets/contact_4-640.webp'
@@ -14,6 +13,7 @@ import ContactHero1024 from '../assets/contact_4-1024.webp'
 import ContactHero1440 from '../assets/contact_4-1440.webp'
 import Contact2 from '../assets/contact_us_2.webp'
 import Contact3 from '../assets/contact_us_3.webp'
+import FAQ_BG from '../assets/faq_bg.jpg.jpeg'
 
 export const Route = createFileRoute('/contact')({
   component: ContactPage,
@@ -342,7 +342,7 @@ export default function ContactPage() {
       </section>
 
       <FaqSection
-        backgroundImage={Review}
+        backgroundImage={FAQ_BG}
         title="Contact FAQs"
         subtitle="Quick answers about consultations, response times, and how to reach the right team."
         items={contactFaq}

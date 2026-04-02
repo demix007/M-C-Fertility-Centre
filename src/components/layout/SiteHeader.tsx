@@ -1,6 +1,6 @@
 import { Link } from '@tanstack/react-router'
 import { useState } from 'react'
-import { CircleDollarSign, FlaskConical, HeartHandshake, Info, Egg, Dna, BookOpen, Newspaper, Phone, Stethoscope, Menu, X } from 'lucide-react'
+import { CircleDollarSign, FlaskConical, HeartHandshake, Info, Egg, Dna, Newspaper, Phone, Stethoscope, Menu, X } from 'lucide-react'
 
 const nav = [
   { to: '/services', label: 'Treatments', icon: Stethoscope },
@@ -9,7 +9,7 @@ const nav = [
   { to: '/donor', label: 'Donor', icon: HeartHandshake },
   { to: '/genetic-testing', label: 'Genetic Testing', icon: Dna },
   { to: '/prices', label: 'Prices', icon: CircleDollarSign },
-  { to: '/guides', label: 'Guides', icon: BookOpen },
+  // { to: '/guides', label: 'Guides', icon: BookOpen },
   // { to: '/successes', label: 'Successes', icon: Trophy },
   { to: '/blog', label: 'Blog', icon: Newspaper },
   { to: '/about', label: 'About', icon: Info },

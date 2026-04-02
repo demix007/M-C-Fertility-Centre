@@ -12,9 +12,8 @@ import Donor from '../assets/donor.webp'
 import Donor640 from '../assets/donor-640.webp'
 import Donor1024 from '../assets/donor-1024.webp'
 import Donor1440 from '../assets/donor-1440.webp'
-import Donor2 from '../assets/donor_2.webp'
 import DonorProgram from '../assets/donor_program.webp'
-import Review from '../assets/review.webp'
+import FAQ_BG from '../assets/faq_bg.jpg.jpeg'
 import Happy from '../assets/happy.webp'
 import Protocols from '../assets/protocols.webp'
 import Fertility from '../assets/fertility.webp'
@@ -179,7 +178,7 @@ export function DonorPage() {
             transition={{ duration: 4.1, repeat: reducedMotion ? 0 : Infinity }}
             className="relative overflow-hidden rounded-3xl border border-border/70 shadow-sm lg:col-span-5"
           >
-            <img src={Donor2} alt="Donor and recipient support consultation" className="h-full min-h-[340px] w-full object-cover" />
+            <img src={DonorProgram} alt="Donor and recipient support consultation" className="h-full min-h-[340px] w-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-background/92 via-background/40 to-transparent" />
             <div className="absolute inset-x-4 bottom-4 rounded-2xl border border-border/70 bg-background/70 p-4 backdrop-blur">
               <div className="text-sm font-extrabold">Who can benefit from donor treatment?</div>
@@ -646,7 +645,7 @@ export function DonorPage() {
       </section>
 
       <FaqSection
-        backgroundImage={Review}
+        backgroundImage={FAQ_BG}
         title="Frequently asked questions"
         subtitle="Clear answers about donor treatment, matching, timelines, and what to expect."
         items={donorFaq}

@@ -57,7 +57,7 @@ export function SiteFooter() {
             <div className="text-sm font-extrabold">Find Us - Allen Avenue, Ikeja</div>
             <div className="mt-3 overflow-hidden rounded-2xl border border-border/70 bg-background/40 shadow-sm">
               <iframe
-                title="M&C Fertility Center Location Map"
+                title="M&C Fertility Centre Location Map"
                 src="https://www.google.com/maps?q=Allen%20Avenue%2C%20Ikeja%2C%20Lagos&output=embed"
                 className="h-72 w-full"
                 loading="lazy"

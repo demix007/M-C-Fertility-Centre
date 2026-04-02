@@ -15,7 +15,7 @@ import Protocols from '../assets/protocols.webp'
 import PetriDish from '../assets/petri_dish.webp'
 import Review from '../assets/review.webp'
 import Advanced from '../assets/advanced.webp'
-import FAQ from '../assets/faq.webp'
+import FAQ_BG from '../assets/faq_bg.jpg.jpeg'
 import {
   ArrowRight,
   Baby,
@@ -733,7 +733,7 @@ function ServicesPage() {
       </section>
 
       <FaqSection
-        backgroundImage={FAQ}
+        backgroundImage={FAQ_BG}
         title="Frequently asked questions"
         subtitle="Quick answers to help you start with confidence—before you speak with our care team."
         items={FAQ_ITEMS}

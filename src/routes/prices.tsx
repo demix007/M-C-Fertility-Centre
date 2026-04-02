@@ -4,7 +4,6 @@ import { useSeo } from '../lib/seo'
 import { useMemo, useState } from 'react'
 import { ArrowRight, CalendarHeart, CheckCircle2, Phone, ShieldCheck, Sparkles } from 'lucide-react'
 import { FaqSection } from '../components/sections/FaqSection'
-import Review from '../assets/review.webp'
 import PricingHero from '../assets/pricing_hero.webp'
 import PricingHero640 from '../assets/pricing_hero-640.webp'
 import PricingHero1024 from '../assets/pricing_hero-1024.webp'
@@ -13,6 +12,7 @@ import Pricing2 from '../assets/pricing_2.webp'
 import Pricing4 from '../assets/pricing_4.webp'
 import Pricing5 from '../assets/pricing_5.webp'
 import pricing3 from '../assets/pricing_3.webp'
+import FAQ_BG from '../assets/faq_bg.jpg.jpeg'
 
 export const Route = createFileRoute('/prices')({
   component: PricesPage,
@@ -275,7 +275,7 @@ function PricesPage() {
       </section>
 
       <FaqSection
-        backgroundImage={Review}
+        backgroundImage={FAQ_BG}
         title="Pricing FAQs"
         subtitle="Quick answers about how fertility pricing works and why totals can vary by patient."
         items={pricingFaq}

@@ -34,7 +34,7 @@ export function FaqSection({
   items,
   ctas = [],
   className,
-  overlayClassName = 'bg-background/65',
+  overlayClassName = 'bg-background/75',
 }: FaqSectionProps) {
   const reducedMotion = useReducedMotion()
   const [openFaq, setOpenFaq] = useState<number | null>(null)

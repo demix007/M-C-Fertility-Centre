@@ -8,7 +8,6 @@ import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { ArrowRight, CheckCircle2, FlaskConical, HeartHandshake, Phone, Sparkles, Stethoscope, TestTube2 } from 'lucide-react'
 import PetriDish from '../assets/petri_dish.webp'
 import Protocols from '../assets/protocols.webp'
-import Review from '../assets/review.webp'
 import HeroSlide1 from '../assets/hero_slide_1.webp'
 import HeroSlide2 from '../assets/hero_slide_2.webp'
 import HeroSlide3 from '../assets/hero_slide_3.webp'
@@ -16,11 +15,12 @@ import HeroSlide4 from '../assets/hero_slide_4.webp'
 import HeroSlide5 from '../assets/hero_slide_5.webp'
 import HeroSlide6 from '../assets/hero_slide_6.webp'
 import BabyFeet from '../assets/baby_feet.webp'
+import BabyWear from '../assets/baby_wear.webp'
 import Diagnose from '../assets/diagnose.webp'
 import Intercourse from '../assets/intercourse.webp'
 import ICU from '../assets/icu.webp'
 import Ovulation from '../assets/ovulation.webp'
-import IVFInfo from '../assets/ivf_info.webp'
+import FAQ_BG from '../assets/faq_bg.jpg.jpeg'
 type IvfTab = 'conventional' | 'mild' | 'natural'
 
 const timelineSteps = [
@@ -457,35 +457,28 @@ function IVFPage() {
       {/* IVF PROCESS */}
       <section className="rounded-3xl border border-border/60 bg-card/30 p-6 shadow-sm md:p-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-stretch">
-          <motion.div
-            initial={false}
-            animate={reducedMotion ? { y: 0 } : { y: [0, -3, 0] }}
-            transition={{ duration: 4.1, repeat: reducedMotion ? 0 : Infinity }}
-            className="relative h-full overflow-hidden rounded-3xl border border-border/70 bg-gradient-to-br from-sky-100/85 via-indigo-50/75 to-emerald-100/80 p-2 shadow-sm lg:col-span-5"
-          >
-            <div className="h-full w-full rounded-[20px] bg-white/55 p-2 ring-1 ring-border/40">
-              <img
-                src={IVFInfo}
-                alt="IVF process and patient monitoring overview"
-                className="h-full w-full rounded-2xl bg-sky-50/45 object-contain p-1"
-              />
+          <div className="relative overflow-hidden rounded-3xl border border-border/70 shadow-sm lg:col-span-5">
+            <img
+              src={BabyWear}
+              alt="Baby clothing and newborn essentials representing IVF journey outcomes"
+              className="h-full min-h-[340px] w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/92 via-background/40 to-transparent" />
+            <div className="absolute inset-x-4 bottom-4 rounded-2xl border border-border/70 bg-background/70 p-4 backdrop-blur">
+              <div className="text-sm font-extrabold">The IVF Journey</div>
+              <div className="mt-1 text-xs text-muted-foreground">
+                Clear milestones and practical guidance through each step of treatment planning and care.
+              </div>
             </div>
-          </motion.div>
+          </div>
 
-          <div className="h-full lg:col-span-7">
-            <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-              <div>
-                <div className="text-2xl font-extrabold text-muted-foreground">The IVF process</div>
-                <h2 className="mt-2 text-xl font-extrabold">Step by step</h2>
-                <p className="mt-2 max-w-3xl text-sm text-muted-foreground">
-                  Here’s what a typical IVF journey can look like. Your timeline may differ depending on protocol choice,
-                  monitoring response, and whether you plan a fresh or frozen embryo transfer.
-                </p>
-              </div>
-              <div className="inline-flex items-center rounded-full border border-border/70 bg-background/45 px-4 py-2 text-xs font-extrabold text-muted-foreground">
-                Clear milestones
-              </div>
-            </div>
+          <div className="lg:col-span-7">
+            <div className="text-2xl font-extrabold text-muted-foreground">The IVF Journey</div>
+            <h2 className="mt-2 text-xl font-extrabold">Step by step</h2>
+            <p className="mt-2 max-w-3xl text-sm text-muted-foreground">
+              Here’s what a typical IVF journey can look like. Your timeline may differ depending on protocol choice,
+              monitoring response, and whether you plan a fresh or frozen embryo transfer.
+            </p>
 
             <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
               {timelineSteps.map((s, idx) => (
@@ -665,7 +658,7 @@ function IVFPage() {
 
       {/* FULL FAQ */}
       <FaqSection
-        backgroundImage={Review}
+        backgroundImage={FAQ_BG}
         title="Frequently asked questions"
         subtitle="Straight answers about timelines, side effects, and what happens at each stage of IVF."
         items={IVF_FAQ}

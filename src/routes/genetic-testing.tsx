@@ -5,14 +5,14 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/Tabs'
 import { FaqSection } from '../components/sections/FaqSection'
 import { useSeo } from '../lib/seo'
 import { faqPageJsonLd } from '../lib/structuredData'
-import Review from '../assets/review.webp'
-import IVFInfo from '../assets/ivf_info.webp'
+import DNA_2 from '../assets/dna_2.webp'
 import GeneticTestingHero from '../assets/genetic_testing_hero.webp'
 import GeneticTestingHero640 from '../assets/genetic_testing_hero-640.webp'
 import GeneticTestingHero1024 from '../assets/genetic_testing_hero-1024.webp'
 import GeneticTestingHero1440 from '../assets/genetic_testing_hero-1440.webp'
 import DNA3 from '../assets/dna_3.webp'
 import DNA1 from '../assets/dna_1.webp'
+import FAQ_BG from '../assets/faq_bg.jpg.jpeg'
 
 export const Route = createFileRoute('/genetic-testing')({
   component: GeneticTestingPage,
@@ -291,18 +291,22 @@ function GeneticTestingPage() {
 
       <section className="rounded-3xl border border-border/60 bg-card/30 p-6 shadow-sm md:p-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-stretch">
-          <motion.div
-            initial={false}
-            animate={reducedMotion ? { y: 0 } : { y: [0, -3, 0] }}
-            transition={{ duration: 4.1, repeat: reducedMotion ? 0 : Infinity }}
-            className="relative h-full overflow-hidden rounded-3xl border border-border/70 bg-gradient-to-br from-sky-100/85 via-indigo-50/75 to-emerald-100/80 p-2 shadow-sm lg:col-span-5"
-          >
-            <div className="h-full w-full rounded-[20px] bg-white/55 p-2 ring-1 ring-border/40">
-              <img src={IVFInfo} alt="Genetic IVF treatment workflow infographic" className="h-full w-full rounded-2xl bg-sky-50/45 object-contain p-1" />
+          <div className="relative overflow-hidden rounded-3xl border border-border/70 shadow-sm lg:col-span-5">
+            <img
+              src={DNA_2}
+              alt="DNA strands representing genetic testing and IVF journey"
+              className="h-full min-h-[340px] w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/92 via-background/40 to-transparent" />
+            <div className="absolute inset-x-4 bottom-4 rounded-2xl border border-border/70 bg-background/70 p-4 backdrop-blur">
+              <div className="text-sm font-extrabold">Genetic IVF Process</div>
+              <div className="mt-1 text-xs text-muted-foreground">
+                Clear milestones and practical guidance through each step of treatment planning and care.
+              </div>
             </div>
-          </motion.div>
+          </div>
 
-          <div className="h-full lg:col-span-7">
+          <div className="lg:col-span-7">
             <div className="text-2xl font-extrabold text-muted-foreground">What does genetic IVF involve?</div>
             <h2 className="mt-2 text-xl font-extrabold">Step-by-step treatment flow</h2>
             <p className="mt-2 max-w-3xl text-sm text-muted-foreground">
@@ -332,10 +336,13 @@ function GeneticTestingPage() {
                           : 'border-rose-200/70 bg-rose-50/55'
                   }`}
                 >
-                  <div className="absolute inset-0 bg-[radial-gradient(520px_220px_at_12%_0%,rgba(37,99,235,0.2),transparent_60%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                  <div
+                    className="absolute inset-0 bg-[radial-gradient(520px_220px_at_12%_0%,rgba(37,99,235,0.2),transparent_60%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                    aria-hidden="true"
+                  />
                   <div className="relative">
                     <div className="flex items-center gap-3">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-2xl border border-border/70 bg-white/60 text-sm font-extrabold text-primary">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-2xl border border-border/70 bg-white/60 text-sm font-extrabold text-primary transition group-hover:scale-105">
                         {s.n}
                       </div>
                       <div className="text-sm font-extrabold">{s.t}</div>
@@ -344,6 +351,10 @@ function GeneticTestingPage() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            <div className="mt-6 rounded-3xl border border-border/70 bg-background/30 p-5 text-sm text-muted-foreground">
+              Not a medical guarantee. Your clinician finalizes your plan after baseline testing and counselling.
             </div>
           </div>
         </div>
@@ -379,7 +390,7 @@ function GeneticTestingPage() {
       </section>
 
       <FaqSection
-        backgroundImage={Review}
+        backgroundImage={FAQ_BG}
         title="Frequently asked questions"
         subtitle="Straight answers about genetic IVF, safety, timelines, and interpretation limits."
         items={faqItems}

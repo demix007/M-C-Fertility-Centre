@@ -11,12 +11,12 @@ import { FaqSection } from '../components/sections/FaqSection'
 import EggFreezingImg from '../assets/egg_freezing.webp'
 import Fertility from '../assets/fertility.webp'
 import FollowUp from '../assets/follow_up.webp'
-import Review from '../assets/review.webp'
 import HeroSlide1 from '../assets/hero_slide_1.webp'
 import HeroSlide2 from '../assets/hero_slide_2.webp'
 import HeroSlide4 from '../assets/hero_slide_4.webp'
 import HeroSlide5 from '../assets/hero_slide_5.webp'
 import HeroSlide6 from '../assets/hero_slide_6.webp'
+import FAQ_BG from '../assets/faq_bg.jpg.jpeg'
 
 export const Route = createFileRoute('/egg-freezing')({
   component: EggFreezingPage,
@@ -510,7 +510,7 @@ function EggFreezingPage() {
       </section>
 
       <FaqSection
-        backgroundImage={Review}
+        backgroundImage={FAQ_BG}
         title="Frequently asked questions"
         subtitle="Clear answers about egg freezing, storage, comfort, and future use."
         items={faqItems}

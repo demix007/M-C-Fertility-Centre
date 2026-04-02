@@ -20,6 +20,7 @@ import AboutHero640 from '../assets/about_1-640.webp'
 import AboutHero1024 from '../assets/about_1-1024.webp'
 import AboutHero1440 from '../assets/about_1-1440.webp'
 import About2 from '../assets/about_3.webp'
+import FAQ_BG from '../assets/faq_bg.jpg.jpeg'
 
 export const Route = createFileRoute('/about')({
   component: AboutPage,
@@ -283,7 +284,7 @@ function AboutPage() {
       </section>
 
       <FaqSection
-        backgroundImage={Review}
+        backgroundImage={FAQ_BG}
         title="About us FAQs"
         subtitle="Quick answers about our team, care model, and how to begin your fertility journey with us."
         items={aboutFaq}
