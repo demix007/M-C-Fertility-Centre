@@ -1,16 +1,12 @@
 import { Link } from '@tanstack/react-router'
 import { clinicInfo } from '../../lib/clinicInfo'
+import { serviceNavLinks } from '../../lib/data/navigation'
 
-const quickLinks = [
-  { to: '/services', label: 'Treatment' },
-  { to: '/ivf', label: 'IVF & Procedures' },
-  { to: '/egg-freezing', label: 'Egg Freezing' },
-  { to: '/donor', label: 'Donor' },
-  { to: '/genetic-testing', label: 'Genetic Testing' },
-  { to: '/prices', label: 'Prices' },
-  { to: '/guides', label: 'Fertility Guides' },
-  { to: '/successes', label: 'Our Successes' },
-  { to: '/booking', label: 'Booking' },
+const whoLinks = [
+  { to: '/about', label: 'Who We Are' },
+  { to: '/prices', label: 'Price List & Payment Plans' },
+  { to: '/contact', label: 'Contact' },
+  { to: '/booking', label: 'Book Consultation' },
 ]
 
 export function SiteFooter() {
@@ -27,7 +23,7 @@ export function SiteFooter() {
               {clinicInfo.city}, {clinicInfo.country}
             </div>
             <div className="mt-2 text-sm text-muted-foreground">
-              <a className="hover:underline" href={`tel:${clinicInfo.phone}`}>
+              <a className="hover:underline" href={`tel:${clinicInfo.phoneHref}`}>
                 {clinicInfo.phone}
               </a>
               <br />
@@ -37,20 +33,37 @@ export function SiteFooter() {
             </div>
           </div>
 
-          <div>
-            <div className="text-sm font-extrabold">Quick Links</div>
-            <ul className="mt-3 space-y-2">
-              {quickLinks.map((l) => (
-                <li key={l.to}>
-                  <Link
-                    to={l.to as any}
-                    className="text-sm font-semibold text-foreground/85 transition hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                  >
-                    {l.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+            <div>
+              <div className="text-sm font-extrabold">Our Services</div>
+              <ul className="mt-3 space-y-2">
+                {serviceNavLinks.map((link) => (
+                  <li key={link.to}>
+                    <Link
+                      to={link.to}
+                      className="text-sm font-semibold text-foreground/85 transition hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <div className="text-sm font-extrabold">Clinic</div>
+              <ul className="mt-3 space-y-2">
+                {whoLinks.map((link) => (
+                  <li key={link.to}>
+                    <Link
+                      to={link.to}
+                      className="text-sm font-semibold text-foreground/85 transition hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           <div>
@@ -69,10 +82,11 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-10 flex flex-col gap-2 border-t border-border/60 pt-6 text-xs text-muted-foreground md:flex-row md:items-center md:justify-between">
-          <div>© {new Date().getFullYear()} {clinicInfo.name}. All rights reserved.</div>
+          <div>
+            © {new Date().getFullYear()} {clinicInfo.name}. All rights reserved.
+          </div>
         </div>
       </div>
     </footer>
   )
 }
-

@@ -25,6 +25,15 @@ function RootLayout() {
     }
   }, [isDev])
 
+  useEffect(() => {
+    if (!location.hash) return
+    const id = decodeURIComponent(location.hash.replace('#', ''))
+    const timer = window.setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }, 80)
+    return () => window.clearTimeout(timer)
+  }, [location.pathname, location.hash])
+
   return (
     <div className="min-h-screen flex flex-col">
       <a

@@ -5,7 +5,7 @@ export function localBusinessJsonLd() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: clinicInfo.name,
-    telephone: clinicInfo.phone,
+    telephone: clinicInfo.phoneHref,
     email: clinicInfo.email,
     address: {
       '@type': 'PostalAddress',
@@ -21,7 +21,7 @@ export function medicalOrganizationJsonLd() {
     '@context': 'https://schema.org',
     '@type': 'MedicalOrganization',
     name: clinicInfo.name,
-    telephone: clinicInfo.phone,
+    telephone: clinicInfo.phoneHref,
     email: clinicInfo.email,
     address: {
       '@type': 'PostalAddress',

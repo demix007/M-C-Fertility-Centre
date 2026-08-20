@@ -33,8 +33,8 @@ function PricesPage() {
       a: 'Yes. During consultation, we provide a structured breakdown showing core pathway costs, expected add-ons, and where variability is most likely.',
     },
     {
-      q: 'Do you discuss payment planning options?',
-      a: 'Yes. We can discuss practical payment planning and available support pathways during consultation.',
+      q: 'Do you offer flexible payment plans?',
+      a: 'Yes. We can discuss practical payment planning during consultation so treatment can be staged around your budget.',
     },
   ] as const
 
@@ -47,10 +47,10 @@ function PricesPage() {
   const featuredRows = useMemo(
     () =>
       [
-        pricingRows.find((r) => r.service === 'IVF Cycle (Mild IVF)'),
-        pricingRows.find((r) => r.service === 'IVF Cycle (Conventional)'),
-        pricingRows.find((r) => r.service === 'Egg Freezing (Collection + Processing)'),
-        pricingRows.find((r) => r.service === 'Donor Program (Consult + Matching)'),
+        pricingRows.find((r) => r.id === 'ivf'),
+        pricingRows.find((r) => r.id === 'surrogacy'),
+        pricingRows.find((r) => r.id === 'sperm-cryo'),
+        pricingRows.find((r) => r.id === 'pgt'),
       ].filter(Boolean),
     [],
   )
@@ -144,7 +144,7 @@ function PricesPage() {
             <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
               {featuredRows.map((row, idx) => (
                 <div
-                  key={row?.service}
+                  key={row?.id}
                   className={`rounded-3xl border p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md ${
                     idx % 3 === 0
                       ? 'border-sky-200/70 bg-sky-50/60'
@@ -202,8 +202,9 @@ function PricesPage() {
             <tbody>
               {pricingRows.map((r, idx) => (
                 <tr
-                  key={r.service}
-                  className={`transition duration-300 hover:bg-background/70 ${
+                  key={r.id}
+                  id={r.id}
+                  className={`scroll-mt-28 transition duration-300 hover:bg-background/70 ${
                     idx % 2 === 0 ? 'bg-sky-50/25' : 'bg-emerald-50/20'
                   }`}
                 >
@@ -252,18 +253,20 @@ function PricesPage() {
           </div>
 
           <div className="rounded-3xl border border-border/70 bg-background/35 p-5">
-            <div className="text-sm font-extrabold">Payment planning conversation</div>
+            <div className="text-sm font-extrabold">Flexible payment plans</div>
             <div className="mt-2 text-sm text-muted-foreground">
-              If you need staged planning, we can walk through options and priorities in consultation.
+              Treatment can be a significant investment. We discuss staged payment planning during consultation so you
+              can map costs against your IVF, surrogacy, or storage pathway.
             </div>
             <div className="mt-4 rounded-3xl border border-border/70 bg-card/30 p-4 text-sm font-extrabold text-muted-foreground">
-              Note: online payment processing is not part of current MVP workflow.
+              Published packages: IVF including medications ₦4,000,000 · Surrogacy ₦8,000,000 · Sperm cryopreservation
+              ₦70,000 per month.
             </div>
             <Link
               to="/booking"
               className="mt-4 inline-flex rounded-full bg-primary px-6 py-3 text-sm font-extrabold text-primary-foreground shadow-sm transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             >
-              Talk about options
+              Talk about payment options
             </Link>
           </div>
         </div>

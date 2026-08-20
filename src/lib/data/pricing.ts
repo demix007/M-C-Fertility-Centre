@@ -1,4 +1,5 @@
 export type PricingRow = {
+  id: string
   service: string
   priceRangeNgn: string
   includes: string
@@ -6,44 +7,51 @@ export type PricingRow = {
 
 export const pricingRows: PricingRow[] = [
   {
+    id: 'consultation',
     service: 'Initial Consultation',
-    priceRangeNgn: '150,000 - 200,000 NGN',
-    includes: 'Doctor review, baseline guidance, and next-step plan.',
+    priceRangeNgn: 'Confirmed at booking',
+    includes: 'Doctor review, baseline guidance, and a clear next-step plan.',
   },
   {
-    service: 'IVF Cycle (Mild IVF)',
-    priceRangeNgn: '1,000,000 - 1,500,000 NGN',
-    includes: 'Stimulation and monitoring bundle; medication varies by protocol.',
+    id: 'ivf',
+    service: 'IVF package including medications',
+    priceRangeNgn: '₦4,000,000',
+    includes: 'Complete IVF package with medications included. Final extras such as PGT or donor gametes are discussed separately.',
   },
   {
-    service: 'IVF Cycle (Conventional)',
-    priceRangeNgn: '1,500,000 - 2,500,000 NGN',
-    includes: 'Stimulation and monitoring bundle; medication varies by protocol and response.',
+    id: 'iui',
+    service: 'IUI',
+    priceRangeNgn: 'Confirmed in consultation',
+    includes: 'Cycle monitoring, sperm preparation, and insemination. Medication needs vary by protocol.',
   },
   {
-    service: 'Egg Freezing (Collection + Processing)',
-    priceRangeNgn: '1,000,000 -1,500,000 NGN',
-    includes: 'Stimulation + egg retrieval; follow-up includes basic post-procedure monitoring.',
+    id: 'surrogacy',
+    service: 'Surrogacy package',
+    priceRangeNgn: '₦8,000,000',
+    includes: 'Surrogacy treatment package. Legal, screening, and individual clinical extras are confirmed in consultation.',
   },
   {
-    service: 'Storage - Year 1',
-    priceRangeNgn: '500,000 - 900,000 NGN',
-    includes: 'Includes cryostorage administration and account setup.',
+    id: 'sperm-cryo',
+    service: 'Sperm cryopreservation',
+    priceRangeNgn: '₦70,000 per month',
+    includes: 'Sperm freezing, processing, and monthly storage.',
   },
   {
-    service: 'Storage - Annual (after Year 1)',
-    priceRangeNgn: '300,000 - 600,000 NGN / year',
-    includes: 'Renewal for ongoing cryostorage; pricing may vary by specimen count.',
+    id: 'cryopreservation',
+    service: 'Egg and embryo cryopreservation',
+    priceRangeNgn: 'Confirmed in consultation',
+    includes: 'Collection or freeze-all planning, laboratory processing, and storage. Duration affects total cost.',
   },
   {
-    service: 'Donor Program (Consult + Matching)',
-    priceRangeNgn: '1,500,000 - 2,000,000 NGN',
-    includes: 'Consultation and matching process. Additional costs depend on treatment pathway.',
+    id: 'donor',
+    service: 'Donor programme',
+    priceRangeNgn: 'Confirmed in consultation',
+    includes: 'Consultation, matching, and counselling. Treatment pathway costs depend on eggs, sperm, or IVF needs.',
   },
   {
-    service: 'Genetic Testing (PGT-A / PGT-M)',
-    priceRangeNgn: '500,000 - 1,000,000 NGN',
-    includes: 'Counseling + lab processing; depends on patient pathway.',
+    id: 'pgt',
+    service: 'PGT (preimplantation genetic testing)',
+    priceRangeNgn: 'Confirmed in consultation',
+    includes: 'Counselling, embryo biopsy, and laboratory analysis. Pricing depends on test type and embryo numbers.',
   },
 ]
-

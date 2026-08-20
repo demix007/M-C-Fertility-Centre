@@ -14,16 +14,20 @@ import Booking2 from '../assets/booking_4.webp'
 type BookingServiceId =
   | 'new-patient'
   | 'ivf-consult'
-  | 'egg-freezing-consult'
+  | 'iui-consult'
+  | 'cryopreservation-consult'
   | 'donor-consult'
-  | 'genetic-testing-counseling'
+  | 'surrogacy-consult'
+  | 'pgt-counseling'
 
 const bookingServices: Array<{ id: BookingServiceId; label: string; blurb: string }> = [
   { id: 'new-patient', label: 'New Patient', blurb: 'Get started with baseline guidance and next steps.' },
   { id: 'ivf-consult', label: 'IVF Consult', blurb: 'Discuss IVF pathways and what you can prepare next.' },
-  { id: 'egg-freezing-consult', label: 'Egg Freezing Consult', blurb: 'Eligibility, timelines, and storage notes.' },
-  { id: 'donor-consult', label: 'Donor Consultation', blurb: 'Privacy-first matching and counseling-led steps.' },
-  { id: 'genetic-testing-counseling', label: 'Genetic Testing Counseling', blurb: 'PGT-A / PGT-M explanations and responsible interpretation.' },
+  { id: 'iui-consult', label: 'IUI Consult', blurb: 'Find out whether intrauterine insemination is right for you.' },
+  { id: 'cryopreservation-consult', label: 'Cryopreservation Consult', blurb: 'Egg, sperm, and embryo freezing and storage.' },
+  { id: 'donor-consult', label: 'Donor Consultation', blurb: 'Why consider a donor, matching, and donation pathways.' },
+  { id: 'surrogacy-consult', label: 'Surrogacy Consult', blurb: 'Process, screening, and package discussion.' },
+  { id: 'pgt-counseling', label: 'PGT Counseling', blurb: 'Types of PGT, benefits, and responsible interpretation.' },
 ]
 
 function pad2(n: number) {

@@ -98,10 +98,10 @@ function FrozenEmbryoTransferPage() {
                 <ArrowRight className="relative z-10 h-4 w-4" aria-hidden="true" />
               </Link>
               <Link
-                to="/egg-freezing"
+                to="/cryopreservation"
                 className="inline-flex items-center justify-center rounded-full border border-border/70 bg-background/35 px-6 py-3 text-sm font-extrabold text-foreground shadow-sm transition hover:bg-background/55 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               >
-                Explore egg freezing
+                Explore cryopreservation
               </Link>
             </div>
           </div>

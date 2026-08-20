@@ -127,7 +127,7 @@ export default function ContactPage() {
                 <ArrowRight className="relative z-10 h-4 w-4" aria-hidden="true" />
               </Link>
               <a
-                href={`tel:${clinicInfo.phone}`}
+                href={`tel:${clinicInfo.phoneHref}`}
                 className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full border border-border bg-card/40 px-6 py-3 text-sm font-extrabold text-foreground shadow-sm transition hover:bg-card/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               >
                 <span
@@ -171,7 +171,7 @@ export default function ContactPage() {
                 {clinicInfo.addressLine2 ? <div>{clinicInfo.addressLine2}</div> : null}
                 <div className="mt-4 flex items-center gap-2">
                   <Phone className="h-4 w-4 text-primary" aria-hidden="true" />
-                  <a className="hover:underline" href={`tel:${clinicInfo.phone}`}>
+                  <a className="hover:underline" href={`tel:${clinicInfo.phoneHref}`}>
                     {clinicInfo.phone}
                   </a>
                 </div>

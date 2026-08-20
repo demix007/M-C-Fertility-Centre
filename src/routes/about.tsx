@@ -83,7 +83,7 @@ function AboutPage() {
 
   return (
     <div className="space-y-10">
-      <section className="relative isolate overflow-hidden rounded-[36px] border border-border/70 shadow-sm">
+      <section id="about" className="relative isolate overflow-hidden rounded-[36px] border border-border/70 shadow-sm">
         <img
           src={AboutHero}
           srcSet={`${AboutHero640} 640w, ${AboutHero1024} 1024w, ${AboutHero1440} 1440w`}
@@ -237,7 +237,45 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="rounded-3xl border border-border/60 bg-card/30 p-6 shadow-sm md:p-8">
+      <section id="values" className="rounded-3xl border border-border/60 bg-card/30 p-6 shadow-sm md:p-8">
+        <div className="text-2xl font-extrabold text-muted-foreground">Who we are</div>
+        <h2 className="mt-2 text-xl font-extrabold sm:text-2xl">Vision, mission, and core values</h2>
+        <p className="mt-2 max-w-3xl text-sm text-muted-foreground">
+          Inspired by leading fertility centres, we pair high clinical standards with personalised care. Every journey is
+          unique — family creation, preservation, donor treatment, or surrogacy — and we stay with you through each stage.
+        </p>
+        <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+          <article className="rounded-3xl border border-sky-200/70 bg-sky-50/60 p-5 shadow-sm">
+            <h3 className="text-sm font-extrabold">Our vision</h3>
+            <p className="mt-2 text-sm text-muted-foreground">
+              To be a trusted fertility centre in Nigeria where advanced reproductive care is delivered with dignity,
+              clarity, and results that protect the long-term health of mother and child.
+            </p>
+          </article>
+          <article className="rounded-3xl border border-emerald-200/70 bg-emerald-50/55 p-5 shadow-sm">
+            <h3 className="text-sm font-extrabold">Our mission</h3>
+            <p className="mt-2 text-sm text-muted-foreground">
+              To provide thoughtful, personalised fertility solutions — combining skilled clinicians, modern laboratory
+              science, transparent pricing, and compassionate support from first consultation through follow-up.
+            </p>
+          </article>
+        </div>
+        <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            { title: 'Compassion', text: 'We listen first and treat every patient as a person, not a protocol.' },
+            { title: 'Excellence', text: 'Evidence-led decisions, careful monitoring, and high laboratory standards.' },
+            { title: 'Transparency', text: 'Clear explanations of options, limitations, and published package prices.' },
+            { title: 'Integrity', text: 'Consent-first counselling and honest conversations about realistic outcomes.' },
+          ].map((value) => (
+            <article key={value.title} className="rounded-3xl border border-border/70 bg-background/35 p-5 shadow-sm">
+              <h3 className="text-sm font-extrabold">{value.title}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{value.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="team" className="rounded-3xl border border-border/60 bg-card/30 p-6 shadow-sm md:p-8">
         <div className="text-2xl font-extrabold text-muted-foreground">Our specialists</div>
         <h2 className="mt-2 text-xl font-extrabold sm:text-2xl">Meet the team supporting your fertility plan</h2>
         <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">

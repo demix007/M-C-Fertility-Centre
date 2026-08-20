@@ -1,35 +1,40 @@
-export type ServiceId = 'new-patient' | 'ivf' | 'mild-ivf' | 'natural-cycle' | 'egg-freezing' | 'donor' | 'genetic-testing'
+export type ServiceId = 'ivf' | 'iui' | 'cryopreservation' | 'donor' | 'surrogacy' | 'pgt'
 
 export const services = [
   {
     id: 'ivf' as const,
-    title: 'Conventional IVF',
-    short: 'A complete IVF pathway with structured monitoring and transfer planning.',
+    title: 'IVF',
+    short: 'In vitro fertilisation with personalised protocols, lab care, and clear next steps.',
+    href: '/ivf',
   },
   {
-    id: 'mild-ivf' as const,
-    title: 'Mild IVF',
-    short: 'A gentler approach focused on quality over quantity with fewer injections for many patients.',
+    id: 'iui' as const,
+    title: 'IUI',
+    short: 'Intrauterine insemination — a less invasive option for selected fertility profiles.',
+    href: '/iui',
   },
   {
-    id: 'natural-cycle' as const,
-    title: 'Natural Cycle IVF',
-    short: 'A lower-intervention strategy tailored for specific profiles and cycle patterns.',
-  },
-  {
-    id: 'egg-freezing' as const,
-    title: 'Egg Freezing',
-    short: 'Preserve fertility with clear steps: consult, stimulate, retrieve, and store.',
+    id: 'cryopreservation' as const,
+    title: 'Cryopreservation',
+    short: 'Freezing of eggs, sperm, and embryos to preserve fertility and treatment options.',
+    href: '/cryopreservation',
   },
   {
     id: 'donor' as const,
     title: 'Donor Services',
-    short: 'Privacy-first donor matching supported by expert counseling.',
+    short: 'Egg and sperm donor pathways with screening, matching, and counselling support.',
+    href: '/donor',
   },
   {
-    id: 'genetic-testing' as const,
-    title: 'Genetic Testing (PGT-A / PGT-M)',
-    short: 'Understand options with accessible explanations and responsible counseling.',
+    id: 'surrogacy' as const,
+    title: 'Surrogacy',
+    short: 'Gestational surrogacy support for people who cannot carry a pregnancy themselves.',
+    href: '/surrogacy',
+  },
+  {
+    id: 'pgt' as const,
+    title: 'PGT',
+    short: 'Preimplantation genetic testing to support informed embryo selection conversations.',
+    href: '/pgt',
   },
 ]
-

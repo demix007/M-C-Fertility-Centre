@@ -1,6 +1,7 @@
 export const clinicInfo = {
   name: 'M&C Fertility Centre',
-  phone: '+234 800 000 0000',
+  phone: '0814 751 3285',
+  phoneHref: '+2348147513285',
   email: 'hello@mcfertility.ng',
   city: 'Lagos',
   country: 'Nigeria',
@@ -12,4 +13,3 @@ export const clinicInfo = {
     { day: 'Sunday', hours: 'By appointment' },
   ],
 } as const
-

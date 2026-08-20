@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SurrogacyRouteImport } from './routes/surrogacy'
 import { Route as SuccessesRouteImport } from './routes/successes'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as RecurrentImplantationRouteImport } from './routes/recurrent-implantation'
@@ -17,12 +18,14 @@ import { Route as PgtRouteImport } from './routes/pgt'
 import { Route as OncofertilityRouteImport } from './routes/oncofertility'
 import { Route as NiptRouteImport } from './routes/nipt'
 import { Route as IvfRouteImport } from './routes/ivf'
+import { Route as IuiRouteImport } from './routes/iui'
 import { Route as IcsiRouteImport } from './routes/icsi'
 import { Route as GeneticTestingRouteImport } from './routes/genetic-testing'
 import { Route as FrozenEmbryoTransferRouteImport } from './routes/frozen-embryo-transfer'
 import { Route as EmbryoscopeRouteImport } from './routes/embryoscope'
 import { Route as EggFreezingRouteImport } from './routes/egg-freezing'
 import { Route as DonorRouteImport } from './routes/donor'
+import { Route as CryopreservationRouteImport } from './routes/cryopreservation'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BookingRouteImport } from './routes/booking'
 import { Route as BlastocystGradingRouteImport } from './routes/blastocyst-grading'
@@ -33,6 +36,11 @@ import { Route as BlogIndexRouteImport } from './routes/blog/index'
 import { Route as GuidesSlugRouteImport } from './routes/guides/$slug'
 import { Route as BlogSlugRouteImport } from './routes/blog/$slug'
 
+const SurrogacyRoute = SurrogacyRouteImport.update({
+  id: '/surrogacy',
+  path: '/surrogacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SuccessesRoute = SuccessesRouteImport.update({
   id: '/successes',
   path: '/successes',
@@ -73,6 +81,11 @@ const IvfRoute = IvfRouteImport.update({
   path: '/ivf',
   getParentRoute: () => rootRouteImport,
 } as any)
+const IuiRoute = IuiRouteImport.update({
+  id: '/iui',
+  path: '/iui',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IcsiRoute = IcsiRouteImport.update({
   id: '/icsi',
   path: '/icsi',
@@ -101,6 +114,11 @@ const EggFreezingRoute = EggFreezingRouteImport.update({
 const DonorRoute = DonorRouteImport.update({
   id: '/donor',
   path: '/donor',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CryopreservationRoute = CryopreservationRouteImport.update({
+  id: '/cryopreservation',
+  path: '/cryopreservation',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -155,12 +173,14 @@ export interface FileRoutesByFullPath {
   '/blastocyst-grading': typeof BlastocystGradingRoute
   '/booking': typeof BookingRoute
   '/contact': typeof ContactRoute
+  '/cryopreservation': typeof CryopreservationRoute
   '/donor': typeof DonorRoute
   '/egg-freezing': typeof EggFreezingRoute
   '/embryoscope': typeof EmbryoscopeRoute
   '/frozen-embryo-transfer': typeof FrozenEmbryoTransferRoute
   '/genetic-testing': typeof GeneticTestingRoute
   '/icsi': typeof IcsiRoute
+  '/iui': typeof IuiRoute
   '/ivf': typeof IvfRoute
   '/nipt': typeof NiptRoute
   '/oncofertility': typeof OncofertilityRoute
@@ -169,6 +189,7 @@ export interface FileRoutesByFullPath {
   '/recurrent-implantation': typeof RecurrentImplantationRoute
   '/services': typeof ServicesRoute
   '/successes': typeof SuccessesRoute
+  '/surrogacy': typeof SurrogacyRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/guides/$slug': typeof GuidesSlugRoute
   '/blog/': typeof BlogIndexRoute
@@ -180,12 +201,14 @@ export interface FileRoutesByTo {
   '/blastocyst-grading': typeof BlastocystGradingRoute
   '/booking': typeof BookingRoute
   '/contact': typeof ContactRoute
+  '/cryopreservation': typeof CryopreservationRoute
   '/donor': typeof DonorRoute
   '/egg-freezing': typeof EggFreezingRoute
   '/embryoscope': typeof EmbryoscopeRoute
   '/frozen-embryo-transfer': typeof FrozenEmbryoTransferRoute
   '/genetic-testing': typeof GeneticTestingRoute
   '/icsi': typeof IcsiRoute
+  '/iui': typeof IuiRoute
   '/ivf': typeof IvfRoute
   '/nipt': typeof NiptRoute
   '/oncofertility': typeof OncofertilityRoute
@@ -194,6 +217,7 @@ export interface FileRoutesByTo {
   '/recurrent-implantation': typeof RecurrentImplantationRoute
   '/services': typeof ServicesRoute
   '/successes': typeof SuccessesRoute
+  '/surrogacy': typeof SurrogacyRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/guides/$slug': typeof GuidesSlugRoute
   '/blog': typeof BlogIndexRoute
@@ -206,12 +230,14 @@ export interface FileRoutesById {
   '/blastocyst-grading': typeof BlastocystGradingRoute
   '/booking': typeof BookingRoute
   '/contact': typeof ContactRoute
+  '/cryopreservation': typeof CryopreservationRoute
   '/donor': typeof DonorRoute
   '/egg-freezing': typeof EggFreezingRoute
   '/embryoscope': typeof EmbryoscopeRoute
   '/frozen-embryo-transfer': typeof FrozenEmbryoTransferRoute
   '/genetic-testing': typeof GeneticTestingRoute
   '/icsi': typeof IcsiRoute
+  '/iui': typeof IuiRoute
   '/ivf': typeof IvfRoute
   '/nipt': typeof NiptRoute
   '/oncofertility': typeof OncofertilityRoute
@@ -220,6 +246,7 @@ export interface FileRoutesById {
   '/recurrent-implantation': typeof RecurrentImplantationRoute
   '/services': typeof ServicesRoute
   '/successes': typeof SuccessesRoute
+  '/surrogacy': typeof SurrogacyRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/guides/$slug': typeof GuidesSlugRoute
   '/blog/': typeof BlogIndexRoute
@@ -233,12 +260,14 @@ export interface FileRouteTypes {
     | '/blastocyst-grading'
     | '/booking'
     | '/contact'
+    | '/cryopreservation'
     | '/donor'
     | '/egg-freezing'
     | '/embryoscope'
     | '/frozen-embryo-transfer'
     | '/genetic-testing'
     | '/icsi'
+    | '/iui'
     | '/ivf'
     | '/nipt'
     | '/oncofertility'
@@ -247,6 +276,7 @@ export interface FileRouteTypes {
     | '/recurrent-implantation'
     | '/services'
     | '/successes'
+    | '/surrogacy'
     | '/blog/$slug'
     | '/guides/$slug'
     | '/blog/'
@@ -258,12 +288,14 @@ export interface FileRouteTypes {
     | '/blastocyst-grading'
     | '/booking'
     | '/contact'
+    | '/cryopreservation'
     | '/donor'
     | '/egg-freezing'
     | '/embryoscope'
     | '/frozen-embryo-transfer'
     | '/genetic-testing'
     | '/icsi'
+    | '/iui'
     | '/ivf'
     | '/nipt'
     | '/oncofertility'
@@ -272,6 +304,7 @@ export interface FileRouteTypes {
     | '/recurrent-implantation'
     | '/services'
     | '/successes'
+    | '/surrogacy'
     | '/blog/$slug'
     | '/guides/$slug'
     | '/blog'
@@ -283,12 +316,14 @@ export interface FileRouteTypes {
     | '/blastocyst-grading'
     | '/booking'
     | '/contact'
+    | '/cryopreservation'
     | '/donor'
     | '/egg-freezing'
     | '/embryoscope'
     | '/frozen-embryo-transfer'
     | '/genetic-testing'
     | '/icsi'
+    | '/iui'
     | '/ivf'
     | '/nipt'
     | '/oncofertility'
@@ -297,6 +332,7 @@ export interface FileRouteTypes {
     | '/recurrent-implantation'
     | '/services'
     | '/successes'
+    | '/surrogacy'
     | '/blog/$slug'
     | '/guides/$slug'
     | '/blog/'
@@ -309,12 +345,14 @@ export interface RootRouteChildren {
   BlastocystGradingRoute: typeof BlastocystGradingRoute
   BookingRoute: typeof BookingRoute
   ContactRoute: typeof ContactRoute
+  CryopreservationRoute: typeof CryopreservationRoute
   DonorRoute: typeof DonorRoute
   EggFreezingRoute: typeof EggFreezingRoute
   EmbryoscopeRoute: typeof EmbryoscopeRoute
   FrozenEmbryoTransferRoute: typeof FrozenEmbryoTransferRoute
   GeneticTestingRoute: typeof GeneticTestingRoute
   IcsiRoute: typeof IcsiRoute
+  IuiRoute: typeof IuiRoute
   IvfRoute: typeof IvfRoute
   NiptRoute: typeof NiptRoute
   OncofertilityRoute: typeof OncofertilityRoute
@@ -323,6 +361,7 @@ export interface RootRouteChildren {
   RecurrentImplantationRoute: typeof RecurrentImplantationRoute
   ServicesRoute: typeof ServicesRoute
   SuccessesRoute: typeof SuccessesRoute
+  SurrogacyRoute: typeof SurrogacyRoute
   BlogSlugRoute: typeof BlogSlugRoute
   GuidesSlugRoute: typeof GuidesSlugRoute
   BlogIndexRoute: typeof BlogIndexRoute
@@ -331,6 +370,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/surrogacy': {
+      id: '/surrogacy'
+      path: '/surrogacy'
+      fullPath: '/surrogacy'
+      preLoaderRoute: typeof SurrogacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/successes': {
       id: '/successes'
       path: '/successes'
@@ -387,6 +433,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IvfRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/iui': {
+      id: '/iui'
+      path: '/iui'
+      fullPath: '/iui'
+      preLoaderRoute: typeof IuiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/icsi': {
       id: '/icsi'
       path: '/icsi'
@@ -427,6 +480,13 @@ declare module '@tanstack/react-router' {
       path: '/donor'
       fullPath: '/donor'
       preLoaderRoute: typeof DonorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cryopreservation': {
+      id: '/cryopreservation'
+      path: '/cryopreservation'
+      fullPath: '/cryopreservation'
+      preLoaderRoute: typeof CryopreservationRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -501,12 +561,14 @@ const rootRouteChildren: RootRouteChildren = {
   BlastocystGradingRoute: BlastocystGradingRoute,
   BookingRoute: BookingRoute,
   ContactRoute: ContactRoute,
+  CryopreservationRoute: CryopreservationRoute,
   DonorRoute: DonorRoute,
   EggFreezingRoute: EggFreezingRoute,
   EmbryoscopeRoute: EmbryoscopeRoute,
   FrozenEmbryoTransferRoute: FrozenEmbryoTransferRoute,
   GeneticTestingRoute: GeneticTestingRoute,
   IcsiRoute: IcsiRoute,
+  IuiRoute: IuiRoute,
   IvfRoute: IvfRoute,
   NiptRoute: NiptRoute,
   OncofertilityRoute: OncofertilityRoute,
@@ -515,6 +577,7 @@ const rootRouteChildren: RootRouteChildren = {
   RecurrentImplantationRoute: RecurrentImplantationRoute,
   ServicesRoute: ServicesRoute,
   SuccessesRoute: SuccessesRoute,
+  SurrogacyRoute: SurrogacyRoute,
   BlogSlugRoute: BlogSlugRoute,
   GuidesSlugRoute: GuidesSlugRoute,
   BlogIndexRoute: BlogIndexRoute,

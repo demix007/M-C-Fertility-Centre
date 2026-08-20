@@ -189,8 +189,8 @@ export function DonorPage() {
           </motion.div>
 
           <div className="lg:col-span-7">
-            <div className="text-2xl font-extrabold text-muted-foreground">Recipient pathways</div>
-            <h2 className="mt-2 text-xl font-extrabold">When donor eggs are often considered</h2>
+            <div className="text-2xl font-extrabold text-muted-foreground">Why consider a donor</div>
+            <h2 className="mt-2 text-xl font-extrabold">When donor eggs or sperm are often considered</h2>
             <ul className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
               {[
                 'Reduced ovarian reserve or poor oocyte quality',
@@ -226,8 +226,8 @@ export function DonorPage() {
       </section>
 
       <section className="rounded-3xl border border-border/60 bg-card/30 p-6 shadow-sm md:p-8">
-        <div className="text-2xl font-extrabold text-muted-foreground">How matching works</div>
-        <h2 className="mt-2 text-xl font-extrabold">Step-by-step donor matching and treatment flow</h2>
+        <div className="text-2xl font-extrabold text-muted-foreground">How a donor is selected</div>
+        <h2 className="mt-2 text-xl font-extrabold">Matching, screening, and treatment flow</h2>
         <p className="mt-2 max-w-3xl text-sm text-muted-foreground">
           Matching is guided by safety and compatibility: phenotypic features, blood group where relevant, and medical
           screening criteria. Every case is reviewed with counselling and clinician oversight.
@@ -594,7 +594,7 @@ export function DonorPage() {
       <section className="rounded-3xl border border-border/60 bg-card/30 p-6 shadow-sm md:p-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-stretch">
           <div className="lg:col-span-7">
-            <div className="text-2xl font-extrabold text-muted-foreground">Donor participation pathway</div>
+            <div className="text-2xl font-extrabold text-muted-foreground">How to donate</div>
             <h2 className="mt-2 text-xl font-extrabold">How to become an egg donor</h2>
             <p className="mt-2 max-w-3xl text-sm text-muted-foreground">
               For people interested in donating, the process is guided and structured: application, screening, and

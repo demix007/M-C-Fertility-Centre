@@ -6,6 +6,7 @@ import { useSeo } from '../lib/seo'
 import { faqPageJsonLd } from '../lib/structuredData'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { ArrowRight, CheckCircle2, FlaskConical, HeartHandshake, Phone, Sparkles, Stethoscope, TestTube2 } from 'lucide-react'
+import { ServiceCostSection } from '../components/sections/ServiceCostSection'
 import PetriDish from '../assets/petri_dish.webp'
 import Protocols from '../assets/protocols.webp'
 import HeroSlide1 from '../assets/hero_slide_1.webp'
@@ -335,6 +336,17 @@ function IVFPage() {
         </div>
       </section>
 
+      <section className="rounded-3xl border border-border/60 bg-card/30 p-6 shadow-sm md:p-8">
+        <div className="text-2xl font-extrabold text-muted-foreground">What is IVF?</div>
+        <h2 className="mt-2 text-xl font-extrabold">In vitro fertilisation, explained clearly</h2>
+        <p className="mt-2 max-w-3xl text-sm text-muted-foreground">
+          IVF is a fertility treatment in which eggs are collected, fertilised with sperm in the laboratory, and an
+          embryo is placed in the uterus. Medication is used to support egg development, monitoring guides timing, and
+          transfer may be fresh or in a later frozen cycle. Your clinician personalises the protocol to your diagnosis,
+          ovarian reserve, and goals.
+        </p>
+      </section>
+
       {/* BEFORE IVF */}
       <section className="group relative overflow-hidden rounded-3xl border border-border/60 bg-card/30 p-6 shadow-sm md:p-8">
         <div
@@ -655,6 +667,13 @@ function IVFPage() {
         </div>
         </div>
       </section>
+
+      <ServiceCostSection
+        heading="Cost of IVF"
+        priceLabel="₦4,000,000"
+        body="Our IVF package including medications is ₦4,000,000. Additional options such as PGT, donor gametes, or frozen embryo transfer are confirmed separately. See the full price list and flexible payment plans."
+        hash="ivf"
+      />
 
       {/* FULL FAQ */}
       <FaqSection
